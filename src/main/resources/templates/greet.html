@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PhotoPost - Greet</title>
+    <!-- Google fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Template CSS Style link -->
+    <link rel="stylesheet" href="/assets/css/style-starter.css">
+</head>
+
+<body>
+    <!-- header -->
+    <div th:replace="header :: header"></div>
+    <!-- //header -->
+    <div style="height: 200px;"></div>
+    <!-- Welcome block -->
+    <section class="w3l-contact py-1" id="contact">
+        <div class="container py-md-1 py-1">
+            <div class="title-main text-center mx-auto mb-md-1 mb-1" style="max-width:500px;">
+                <h3 class="title-style" th:text="${'Welcome - ' + username}"></h3>
+                <p class="" th:text="${'You logged in as - ' + roles}"></p>
+                <p class="" th:if="${!#strings.isEmpty(enrolledClass)}" th:text="${'Your assigned class is - [' + enrolledClass+']'}"></p>
+            </div>
+            
+        </div>
+    </section>
+    <!-- //Welcome block -->
+
+    <!-- common jquery plugin -->
+    <script src="/assets/js/jquery-3.3.1.min.js"></script>
+    <!-- //common jquery plugin -->
+
+    <!-- bootstrap -->
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <!-- //bootstrap -->
+    <!-- //Js scripts -->
+</body>
+
+</html>
