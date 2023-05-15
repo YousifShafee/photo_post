@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PhotoPost - Home</title>
+    <!-- Google fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Template CSS Style link -->
+    <link rel="stylesheet" href="/assets/css/style-starter.css">
+</head>
+
+<body>
+    <!-- header -->
+    <div th:replace="header :: header"></div>
+    <!-- //header -->
+    
+    <div style="height: 150px;"></div>
+
+    <div class="row justify-content-center">
+        <div th:each="photo : ${photos}" class="col-lg-2 col-md-4">
+            <div class="coursecard-single">
+                <div class="grids5-info position-relative">
+                </div>
+                <div class="thumbnail">
+                    <img class="img-thumbnail" th:src="@{'/photo/' + ${photo.photoId}}">
+                  </div>
+                <div class="mb-4 mt-3">
+                    <p class="text-center" th:text="${photo.description}"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- common jquery plugin -->
+    <script src="/assets/js/jquery-3.3.1.min.js"></script>
+    <!-- //common jquery plugin -->
+
+    <!-- bootstrap -->
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <!-- //bootstrap -->
+    <!-- //Js scripts -->
+</body>
+
+</html>
