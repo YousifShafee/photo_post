@@ -6,4 +6,4 @@ INSERT INTO category (category_id, category_name) VALUES (2, 'machine');
 INSERT INTO category (category_id, category_name) VALUES (3, 'nature');
 
 INSERT INTO `person` (`first_name`,`email`,`pwd`,`role_id`,`created_at`, `created_by`) VALUES ('admin','admin','admin123', 1 ,CURDATE(),'admin');
-INSERT INTO `person` (`first_name`,`email`,`pwd`,`role_id`,`created_at`, `created_by`) VALUES ('Yousif','yousif','12345', 2 ,CURDATE(),'admin');
+INSERT INTO `person` (`first_name`,`email`,`pwd`,`role_id`,`created_at`, `created_by`) VALUES ('Guest','user','user123', 2 ,CURDATE(),'admin');
