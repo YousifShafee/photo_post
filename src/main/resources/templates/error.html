@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Error</title>
+    <!-- Google fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Template CSS Style link -->
+    <link rel="stylesheet" href="/assets/css/style-starter.css">
+</head>
+
+<body>
+
+<!-- header -->
+<div th:replace="header :: header">...</div>
+<!-- //header -->
+
+<div style="height: 60px;"></div>
+
+<!-- error block -->
+<section class="page_404">
+    <div class="container">
+        <div class="col-sm-12 ">
+            <div class="col-sm-12 col-sm-offset-1  text-center">
+                <div class="four_zero_four_bg">
+                    <h1 class="text-center">oops...</h1>
+                </div>
+                <div class="contant_box_404">
+                    <h3 class="h2">
+                        Look like you're lost
+                    </h3>
+                    <p th:text="${'Error Message - ' + errormsg}"></p>
+                    <a th:href="@{/home}" class="link_404 btn btn-style btn-style-3">Go to Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- //error block -->
+
+<!-- Js scripts -->
+
+<!-- common jquery plugin -->
+<script src="/assets/js/jquery-3.3.1.min.js"></script>
+<!-- //common jquery plugin -->
+
+<!-- bootstrap -->
+<script src="/assets/js/bootstrap.min.js"></script>
+<!-- //bootstrap -->
+<!-- //Js scripts -->
+</body>
+
+</html>
